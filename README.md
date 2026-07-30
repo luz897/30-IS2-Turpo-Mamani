@@ -29,17 +29,16 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 
 | Caso | Datos de entrada / acción | Resultado esperado | Resultado obtenido | Estado |
 |---|---|---|---|---|
-| CP-01: caso válido | Con 3 préstamos registrados en la tabla, hacer clic en "Restablecer datos de ejemplo" y luego en "Aceptar" en el cuadro de confirmación. | El sistema debe mostrar un mensaje indicando la cantidad correcta de registros a eliminar antes de confirmar, y al aceptar debe eliminarlos todos. | El cuadro de confirmación mostró "Se eliminarán 3 registros de préstamo. ¿Desea continuar?"; al aceptar, se eliminaron los 3 registros y apareció el mensaje "Se eliminaron 3 registros correctamente". | Aprobado |
-| CP-02: caso límite o inválido | Con 0 préstamos registrados (tabla vacía), hacer clic en "Restablecer datos de ejemplo". | El sistema no debe abrir el cuadro de confirmación, y debe informar que no hay registros para eliminar. | Se mostró el mensaje "No hay registros para eliminar." y no se abrió ningún cuadro de confirmación. | Aprobado |
+| CP-01: caso válido | Con 3 préstamos registrados en la tabla, hacer clic en "Restablecer datos de ejemplo". | El sistema debe mostrar un mensaje indicando la cantidad correcta de registros a eliminar antes de confirmar. | El cuadro de confirmación mostró "Se eliminarán 3 registros de préstamo. ¿Desea continuar?", coincidiendo con la cantidad real de préstamos registrados. | Aprobado |
+| CP-02: caso de cancelación | Con 3 préstamos registrados en la tabla, hacer clic en "Restablecer datos de ejemplo" y luego en "Cancelar" en el cuadro de confirmación. | Al cancelar, los datos deben mantenerse sin ningún cambio. | La tabla siguió mostrando los mismos 3 préstamos (Kit Arduino, Router TP-Link, Proyector Epson), todos en estado "Activo", sin ninguna modificación. | Aprobado |
 
 ### Evidencia de las pruebas
 
-**CP-01 — Confirmación con cantidad correcta:**
+**CP-01 - El mensaje indica la cantidad correcta:**
 ![CP-01](capturas/cp-01-confirmacion.png)
 
-**CP-02 — Cancelación sin cambios:**
+**CP-02 - Al cancelar se mantienen los datos:**
 ![CP-02](capturas/cp-02-cancelacion.png)
-
 ## Entrega
 
 - URL del repositorio individual.
