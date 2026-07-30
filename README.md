@@ -25,7 +25,7 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 
 ## Casos de prueba de mi mejora
 
-**Mejora implementada:** Restablecimiento con cantidad afectada — el botón "Restablecer datos de ejemplo" informa cuántos registros se eliminarán antes de confirmar la acción.
+**Mejora implementada:** Restablecimiento con cantidad afectada: El botón "Restablecer datos de ejemplo" informa cuántos registros se eliminarán antes de confirmar la acción.
 
 | Caso | Datos de entrada / acción | Resultado esperado | Resultado obtenido | Estado |
 |---|---|---|---|---|
