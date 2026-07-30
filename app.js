@@ -131,9 +131,19 @@ loanList.addEventListener("click", (event) => {
 });
 
 document.querySelector("#resetDemoBtn").addEventListener("click", () => {
-  if (confirm("¿Desea eliminar todos los préstamos guardados en este navegador?")) {
+  const loans = loadLoans();
+  const total = loans.length;
+
+  if (total === 0) {
+    showMessage("No hay registros para eliminar.");
+    return;
+  }
+
+  const mensaje = `Se eliminarán ${total} registro${total === 1 ? "" : "s"} de préstamo. ¿Desea continuar?`;
+
+  if (confirm(mensaje)) {
     localStorage.removeItem(STORAGE_KEY);
-    showMessage("");
+    showMessage(`Se eliminaron ${total} registro${total === 1 ? "" : "s"} correctamente.`);
     renderLoans();
   }
 });

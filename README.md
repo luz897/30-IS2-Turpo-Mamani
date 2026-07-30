@@ -25,12 +25,20 @@ Miniaplicación estática para la actividad individual de aseguramiento de calid
 
 ## Casos de prueba de mi mejora
 
-Reemplace esta tabla por los dos casos de su asignación. Incluya una captura por caso en el repositorio o muestre ambas pruebas en el video.
+**Mejora implementada:** Restablecimiento con cantidad afectada — el botón "Restablecer datos de ejemplo" informa cuántos registros se eliminarán antes de confirmar la acción.
 
 | Caso | Datos de entrada / acción | Resultado esperado | Resultado obtenido | Estado |
 |---|---|---|---|---|
-| CP-01: caso válido | [Completar] | [Completar] | [Completar] | Aprobado / Fallido |
-| CP-02: caso límite o inválido | [Completar] | [Completar] | [Completar] | Aprobado / Fallido |
+| CP-01: caso válido | Con 3 préstamos registrados en la tabla, hacer clic en "Restablecer datos de ejemplo" y luego en "Aceptar" en el cuadro de confirmación. | El sistema debe mostrar un mensaje indicando la cantidad correcta de registros a eliminar antes de confirmar, y al aceptar debe eliminarlos todos. | El cuadro de confirmación mostró "Se eliminarán 3 registros de préstamo. ¿Desea continuar?"; al aceptar, se eliminaron los 3 registros y apareció el mensaje "Se eliminaron 3 registros correctamente". | Aprobado |
+| CP-02: caso límite o inválido | Con 0 préstamos registrados (tabla vacía), hacer clic en "Restablecer datos de ejemplo". | El sistema no debe abrir el cuadro de confirmación, y debe informar que no hay registros para eliminar. | Se mostró el mensaje "No hay registros para eliminar." y no se abrió ningún cuadro de confirmación. | Aprobado |
+
+### Evidencia de las pruebas
+
+**CP-01 — Confirmación con cantidad correcta:**
+![CP-01](capturas/cp-01-confirmacion.png)
+
+**CP-02 — Cancelación sin cambios:**
+![CP-02](capturas/cp-02-cancelacion.png)
 
 ## Entrega
 
